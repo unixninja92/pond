@@ -226,7 +226,7 @@ func (c *Conn) read(data []byte) (n int, err error) {
 
 	theirLength := int(lengthBytes[0]) + int(lengthBytes[1])<<8
 	if theirLength > len(data) {
-		return 0, errors.New("tranport: given buffer too small (" + strconv.Itoa(len(data)) + " vs " + strconv.Itoa(theirLength) + ")")
+		return 0, errors.New("transport: given buffer too small (" + strconv.Itoa(len(data)) + " vs " + strconv.Itoa(theirLength) + ")")
 	}
 
 	data = data[:theirLength]
