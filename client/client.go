@@ -305,7 +305,7 @@ type pendingDecryption struct {
 	// index is used by the UI code and indexes the list of detachments in
 	// a message.
 	index int
-	// cancel is a thunk that causes the task to be canceled at some point
+	// cancel is a func that causes the task to be canceled at some point
 	// in the future.
 	cancel func()
 }
